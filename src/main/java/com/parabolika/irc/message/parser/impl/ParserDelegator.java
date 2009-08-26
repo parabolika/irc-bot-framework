@@ -13,7 +13,6 @@ public class ParserDelegator implements IRCMessageParser {
 		for(IRCMessageParser parser : availableParsers) {
 			IRCMessage possibleMessage = parser.parse(message);
 			if(possibleMessage != null) {
-				System.out.println(possibleMessage.getClass());
 				return possibleMessage;
 			}
 		}
